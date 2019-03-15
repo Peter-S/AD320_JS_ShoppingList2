@@ -1,0 +1,116 @@
+html
+  //- head
+  //-   title Add products
+  //-   script(src='/javascripts/delete.js')
+  //- body
+  //-   form(method='post', action='/api/v1/product/addProduct')
+  //-     | Item:
+  //-     input(type='text', name='item')
+  //-     | Quantity:
+  //-     input(type='text', name='quantity')
+  //-     input(type='submit', value='Submit')
+  block content
+    .wrapper
+      header
+        img.mealticket(src='images/mealticket.png')
+      .main
+        h1.titlemain Welcome to Meal Ticket
+        h3 Grocery lists made easy 
+        p
+        body
+          form(method='post', action='/api/v1/product/addProduct')
+            | Item:
+            input(type='text', name='item')
+            | Quantity:
+            input(type='text', name='quantity')
+            input(type='submit', value='Submit')
+        h5 All products in database 
+        #list1
+        h5 Products to Buy 
+        #list2
+        h5 Products Bought
+        #list3
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/delete.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script.
+      $(document).ready(function(){
+      $.getJSON("http://localhost:3000/api/v1/product/all", (result)=>{
+      $.each(result, (i, field) => {
+      var title = "<div class='film'><h3 film_id="
+      + field.Id_Number
+      +"<br />ID Number: "
+      + field.ID
+      +"   Item: "
+      + field.Item
+      +"   Qty: "
+      + field.Quanity
+      + " "
+      + " <button type='button' id='del'>Delete</button>"
+      + "</div></div>";
+      $("#list1").append(title);
+      });
+      });
+      });
+  body
+    //h1  All Products in Database
+    //#list1
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script.
+      $(document).ready(function(){
+      //alert();
+      $.getJSON("http://localhost:3000/api/v1/product/toGet", (result)=>{
+      $.each(result, (i, field) => {
+      var title = "<div class='film'><h3 film_id="
+      + field.Id_Number
+      +"<br />ID Number: "
+      + field.ID
+      +"   Item: "
+      + field.Item
+      +"   Qty: "
+      + field.Quanity
+      + "</div></div>";
+      $("#list2").append(title);
+      });
+      });
+      });
+  body
+    // h1  Products to Buy
+    // #list2
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script.
+      $(document).ready(function(){
+      //alert();
+      $.getJSON("http://localhost:3000/api/v1/product/got", (result)=>{
+      $.each(result, (i, field) => {
+      var title = "<div class='film'><h3 film_id="
+      + field.Id_Number
+      +"<br />ID Number: "
+      + field.ID
+      +"   Item: "
+      + field.Item
+      +"   Qty: "
+      + field.Quanity
+      + "</div></div>";
+      $("#list3").append(title);
+      });
+      });
+      });
+  body
+    // h1  Products That have been bought 
+    // #list3
+
+  .a2a_kit.a2a_kit_size_32.a2a_default_style
+    a.a2a_dd(href='https://www.addtoany.com/share')
+    a.a2a_button_email
+    a.a2a_button_copy_link
+  script(async='', src='https://static.addtoany.com/menu/page.js')
+  footer
+     Group One Project
