@@ -1,0 +1,9 @@
+html
+  head
+    title Add products
+  body
+    form(method='post', action='/api/v1/product/addProduct')
+      | Title:
+      input(type='text', name='title')
+      br
+      input(type='submit', value='Submit')

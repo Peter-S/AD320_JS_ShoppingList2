@@ -1,0 +1,138 @@
+body {
+	color: #000;
+	background-color: #fff;
+	background-position: center;
+	font-family: Georgia, Times, serif;
+	line-height: 1.4em;
+	margin: 0px;
+	height: 100%;
+	background-image: url("http://themcmorrislife.com/wood.jpg");
+	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+header {
+	top: 0;
+	height: 150px;
+	background-image: url("http://themcmorrislife.com/AD320_ShoppingList-master/AD320_ShoppingList-master/images/grocery.jpg");
+}
+
+
+nav {
+	width: 170px;
+	float: left;
+	height: 100%;
+	background: #fff;
+	text-align: center;
+	padding-top: 70px;
+}
+
+.mealticket {
+	left: 0;
+	width: 150px;
+	height: 150px;
+}
+
+.mealticket2 {
+	left: 0;
+	width: 120px;
+	height: 120px;
+}
+
+.titlemain{
+	font-size: 3em;
+}
+
+.drinks{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	padding: 35px;
+}
+
+.center{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	background-color: #fff;
+	padding: 20px;
+}
+
+nav ul{
+	margin: 0px;
+	padding: 5px 0px 5px 30px;
+}
+
+nav li {
+	display: inline;
+	margin-right: 40px;
+}
+
+ a{
+	text-decoration: none;
+	background-color: #fff;
+	padding: 6px;
+}
+
+a:hover{
+	background-color: #555;
+}
+
+a:active {
+	background-color: #000;
+}
+
+h1{
+	font-size: 8em;
+	line-height: 80%;
+	color: #8b5a2b;
+		font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif; 
+}
+
+h2{
+	font-size: 3em;
+	color:  	#8b5a2b;
+}
+
+/*aside{
+	width: 330px;
+	height: 100px;
+	float: left;
+	padding: 0px 0px 0px 20px;
+}*/
+
+.main{
+	margin-left: 378px;
+	min-height: 100%;
+	padding: 60px;
+	width: 500px;
+	text-align: center;
+	background-color: #fff;
+}
+
+.formstyle {
+	margin: 20px;
+	font-size: 1em;
+}
+
+.enter{
+	display: inline-block;
+	padding-top: 20px;
+}
+
+footer{
+	padding: 8px 0px 0px 20px;
+	text-align: center;
+	top: 82px;
+}
